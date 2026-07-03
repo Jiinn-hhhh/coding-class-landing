@@ -488,7 +488,7 @@ h3 {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
   gap: 28px;
   align-items: center;
   padding: clamp(54px, 7vw, 84px) clamp(20px, 4vw, 56px);
@@ -508,6 +508,55 @@ h3 {
   max-width: 720px;
   margin: 18px 0 0;
   color: rgba(255, 255, 255, 0.76);
+}
+
+.contact-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-link {
+  display: grid;
+  gap: 2px;
+  min-height: 76px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 14px 16px;
+}
+
+.contact-link span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.contact-link strong {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.contact-link.primary-contact {
+  background: #fff;
+}
+
+.contact-link.primary-contact span {
+  color: var(--green);
+}
+
+.contact-link.primary-contact strong {
+  color: var(--green-dark);
+}
+
+.contact-link.kakao {
+  background: #fee500;
+  border-color: #fee500;
+}
+
+.contact-link.kakao span,
+.contact-link.kakao strong {
+  color: #231815;
 }
 
 .site-footer {
@@ -607,10 +656,6 @@ h3 {
   .hero-actions .button {
     flex: 1 1 0;
     width: auto;
-  }
-
-  .contact-section .button {
-    width: 100%;
   }
 
   .hero-panel img {
