@@ -74,22 +74,19 @@ h3 {
 }
 
 .brand {
-  display: inline-grid;
+  display: inline-flex;
+  align-items: center;
   width: max-content;
   max-width: 100%;
-  line-height: 1.08;
+  margin-left: -16px;
 }
 
-.brand span {
-  font-size: 18px;
-  font-weight: 900;
-}
-
-.brand strong {
-  color: var(--green);
-  font-size: 12px;
-  font-weight: 850;
-  letter-spacing: 0.02em;
+.brand-logo {
+  display: block;
+  width: clamp(136px, 13vw, 188px);
+  height: auto;
+  max-height: 46px;
+  object-fit: contain;
 }
 
 nav {
@@ -306,8 +303,8 @@ h3 {
 
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(128px, 180px) minmax(0, 1fr);
-  gap: 30px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
   align-items: start;
   border-top: 2px solid var(--ink);
   padding-top: 18px;
@@ -521,9 +518,7 @@ h3 {
 }
 
 .career-section .section-heading {
-  display: grid;
-  grid-template-columns: minmax(120px, 170px) minmax(0, 1fr);
-  gap: 18px;
+  gap: 12px;
   margin-bottom: 14px;
   border-top-color: rgba(255, 255, 255, 0.18);
   padding-top: 10px;
@@ -531,7 +526,6 @@ h3 {
 
 .career-section h2 {
   max-width: 760px;
-  font-size: clamp(32px, 4vw, 54px);
   line-height: 1.08;
 }
 
@@ -691,12 +685,7 @@ h3 {
   }
 
   .career-section .section-heading {
-    grid-template-columns: 1fr;
     margin-bottom: 16px;
-  }
-
-  .career-section .section-heading > p:last-child {
-    grid-column: auto;
   }
 
   .career-list {
@@ -720,14 +709,14 @@ h3 {
     padding: 11px 20px 10px;
   }
 
-  .brand span {
-    font-size: 15px;
-  }
-
-  .brand strong,
   nav,
   .header-cta {
     font-size: 12px;
+  }
+
+  .brand-logo {
+    width: 132px;
+    max-height: 40px;
   }
 
   nav {
@@ -833,7 +822,6 @@ h3 {
   }
 
   .career-section h2 {
-    font-size: 30px;
     line-height: 1.08;
   }
 
